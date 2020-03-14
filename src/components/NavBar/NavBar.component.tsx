@@ -27,6 +27,7 @@ const NavBar: React.FC<Props> = () => {
         <HeaderContainer>
           <Link to="/map">VIRI</Link>
           <Link to="/selfreport">SELF-CHECK</Link>
+          <Link to="/profile">PROFILE</Link>
           <div onClick={handleLogin}>SIGN OUT</div>
         </HeaderContainer>
       )}

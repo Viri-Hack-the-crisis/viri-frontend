@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import FrontPage from "./pages/FrontPage/FrontPage";
 import HowThisWorksPage from "./pages/HowThisWorksPage/HowThisWorksPage";
 import MapPage from "./pages/MapPage/MapPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SelfReportPage from "./pages/SelfReportPage/SelfReportPage";
 
 import NavBar from "./components/NavBar/NavBar.component";
@@ -26,6 +27,9 @@ const App: React.FC<Props> = props => {
         </Route>
         <Route exact path="/selfreport">
           <SelfReportPage />
+        </Route>
+        <Route exact path="/profile">
+          <ProfilePage />
         </Route>
       </Switch>
     </div>
