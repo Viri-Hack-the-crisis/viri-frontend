@@ -7,7 +7,7 @@ interface Props {}
 const MapPage = (props: Props) => {
   return (
     <div>
-      <Map></Map>
+      <Map />
     </div>
   );
 };

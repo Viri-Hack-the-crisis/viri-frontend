@@ -7,7 +7,7 @@ export const HeaderContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  height: 50px;
+  height: 6vh;
   /* position: fixed; */
   z-index: 99999;
 `;
