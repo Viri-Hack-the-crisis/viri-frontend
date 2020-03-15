@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 
 import { StoreContext } from "../../state/store";
 
+import { ProfileContainer } from "../../components/Profile/Profile.styles";
+
 interface Props {}
 
 const ProfilePage = (props: Props) => {
@@ -16,9 +18,9 @@ const ProfilePage = (props: Props) => {
   }, [history, userLoggedIn]);
 
   return (
-    <div>
-      <h1>Profile Page placeholder</h1>
-    </div>
+    <ProfileContainer>
+      Here
+    </ProfileContainer>
   );
 };
 

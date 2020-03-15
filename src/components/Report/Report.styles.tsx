@@ -52,3 +52,29 @@ export const ButtonBlue = styled.button`
     margin: 5px;
     background-color: transparent;
 `;
+
+export const ButtonBlueActive = styled.button`
+    display: flex;
+    border: 1px solid #346EA6;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 12px 23px;
+    color: #FFFCF9;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 5px;
+    background-color: #346EA6;
+`;
+
+export const ButtonYellowActive = styled.button`
+    display: flex;
+    border: 1px solid #F8DB57;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 12px 23px;
+    color: #FFFCF9;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 5px;
+    background-color: #F8DB57;
+`;

@@ -12,6 +12,7 @@ import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 import { StoreContext } from "../../state/store";
+import { Script } from "vm";
 
 interface Props {}
 
