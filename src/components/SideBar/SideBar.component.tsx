@@ -21,7 +21,7 @@ const NavBar: React.FC<Props> = () => {
       <LocationAndInfectionsContainer>
         <SelectedAreaContainer>
           <b>Selected Area</b>
-          <p>Estonia Harjumaa Tallinn Kristiine</p>
+          <p>New Zealand Waikato Region Cambridge</p>
         </SelectedAreaContainer>
 
         <div>
@@ -37,7 +37,7 @@ const NavBar: React.FC<Props> = () => {
         </div>
 
         <div>
-          <b>Contacts With Infected People:</b>
+          <b>Close Contacts With Infections:</b>
           <p>{Math.floor(Math.random() * (24 - 0 + 1)) + 0} time(s)</p>
         </div>
       </LocationAndInfectionsContainer>
