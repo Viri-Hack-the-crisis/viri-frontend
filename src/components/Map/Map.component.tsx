@@ -50,7 +50,7 @@ const Map: React.FC<Props> = props => {
       <HeatmapLayer
         //Next 2 props focus the map on heatmap data
         fitBoundsOnLoad
-        fitBoundsOnUpdate
+        /* fitBoundsOnUpdate */
         // Entry point for heatmap data
         points={addressPoints}
         latitudeExtractor={(m: any) => m[0]}
