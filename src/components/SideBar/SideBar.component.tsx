@@ -31,12 +31,14 @@ const NavBar: React.FC<Props> = () => {
 
         <div>
           <b>Self-Reported Cases:</b>
-          <p>218</p>
+          <p>
+            {confirmedInfected * Math.floor(Math.random() * (10 - 0 + 1)) + 0}
+          </p>
         </div>
 
         <div>
           <b>Contacts With Infected People:</b>
-          <p>1 time(s)</p>
+          <p>{Math.floor(Math.random() * (24 - 0 + 1)) + 0} time(s)</p>
         </div>
       </LocationAndInfectionsContainer>
 

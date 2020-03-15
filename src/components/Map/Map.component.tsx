@@ -42,7 +42,7 @@ const Map: React.FC<Props> = props => {
     <LeafletMap
       center={[59.43708, 24.745272]}
       maxZoom={19}
-      style={{ width: "100%", height: "94vh" }}
+      style={{ width: "100%", height: "90vh" }}
       zoom={12}
       zoomControl={false}
       onClick={handleClick}
@@ -50,7 +50,7 @@ const Map: React.FC<Props> = props => {
       <HeatmapLayer
         //Next 2 props focus the map on heatmap data
         fitBoundsOnLoad
-        fitBoundsOnUpdate
+        /* fitBoundsOnUpdate */
         // Entry point for heatmap data
         points={addressPoints}
         latitudeExtractor={(m: any) => m[0]}
