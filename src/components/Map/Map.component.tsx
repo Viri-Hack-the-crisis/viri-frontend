@@ -5,7 +5,7 @@ import {
   TileLayer,
   ZoomControl
 } from "react-leaflet";
-// @ts-ignore
+
 import HeatmapLayer from "react-leaflet-heatmap-layer";
 import { LeafletMouseEvent, LatLngTuple } from "leaflet";
 
@@ -18,7 +18,9 @@ import { addressPoints } from "../../utilities/addressPoints";
 interface Props {}
 
 const Map: React.FC<Props> = props => {
-  const [searchCirclePosition, setSearchCirclePosition] = useState([0, 0]);
+  const [searchCirclePosition, setSearchCirclePosition] = useState<
+    number[] | null
+  >([]);
 
   const { setConfirmedInfected } = useContext(StoreContext);
 
@@ -48,7 +50,7 @@ const Map: React.FC<Props> = props => {
       <HeatmapLayer
         //Next 2 props focus the map on heatmap data
         fitBoundsOnLoad
-        /* fitBoundsOnUpdate */
+        fitBoundsOnUpdate
         // Entry point for heatmap data
         points={addressPoints}
         latitudeExtractor={(m: any) => m[0]}
@@ -59,13 +61,15 @@ const Map: React.FC<Props> = props => {
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Circle
-        center={searchCirclePosition as LatLngTuple}
-        color="#F45B4F"
-        fillColor="#F8DB57"
-        fillOpacity={0.4}
-        radius={searchRadius}
-      ></Circle>
+      {searchCirclePosition?.length ? (
+        <Circle
+          center={searchCirclePosition as LatLngTuple}
+          color="#F45B4F"
+          fillColor="#F8DB57"
+          fillOpacity={0.4}
+          radius={searchRadius}
+        ></Circle>
+      ) : null}
       <ZoomControl position="bottomright" />
     </LeafletMap>
   );
