@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
-  color: #FFFCF9;
+  color: #fffcf9;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 92px;
+  height: 10vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 16px;
   line-height: 19px;
@@ -26,7 +26,7 @@ export const MenuList = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #346EA6;
+  color: #346ea6;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
