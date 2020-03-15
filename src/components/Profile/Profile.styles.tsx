@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const ProfileContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    max-width: 710px;
+    height: auto;
+    color: #346EA6;
+`;
+
 export const ReportContainer = styled.div`
     justify-content: left;
     margin: auto;
@@ -25,56 +36,59 @@ export const H2 = styled.div`
     padding-bottom: 26px;
 `;
 
-export const ReportText = styled.p`
+export const ProfileText = styled.p`
     font-size: 16px;
     line-height: 19px;
-    color: #000000;
-    padding-bottom: 36px;
-`;
-
-export const ButtonLine = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 540px;
-    margin-bottom: 40px;
-    margin-left: -5px;
-`;
-
-export const ButtonBlue = styled.button`
-    display: flex;
-    border: 1px solid #346EA6;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 12px 23px;
     color: #346EA6;
-    font-size: 16px;
-    line-height: 19px;
-    margin: 5px;
-    background-color: transparent;
 `;
 
-export const ButtonBlueActive = styled.button`
+export const ProfileInfo = styled.div`
     display: flex;
-    border: 1px solid #346EA6;
+    width: 715px;
+`;
+
+export const ProfileTopic = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+`;
+
+export const ProfileFackts = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-items: right;
+    width: 50%;
+`;
+
+export const ProfileButtonGreen = styled.button`
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border: 1px solid #1DE1CE;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 12px 23px;
+    padding: 5px 33px;
     color: #FFFCF9;
     font-size: 16px;
     line-height: 19px;
     margin: 5px;
-    background-color: #346EA6;
+    background-color: #1DE1CE;
+    margin-left: 200px;
 `;
 
-export const ButtonYellowActive = styled.button`
+export const ProfileButtonYellow = styled.button`
     display: flex;
+    width: 50%;
+    justify-content: right;
     border: 1px solid #F8DB57;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 12px 23px;
+    padding: 5px 33px;
     color: #FFFCF9;
     font-size: 16px;
     line-height: 19px;
     margin: 5px;
     background-color: #F8DB57;
+    margin-left: 200px;
 `;

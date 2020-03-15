@@ -8,7 +8,7 @@ import { H1 } from "../../components/Report/Report.styles";
 import { H2 } from "../../components/Report/Report.styles";
 import { ReportText } from "../../components/Report/Report.styles";
 import { ButtonLine } from "../../components/Report/Report.styles";
-import { ButtonBlue } from "../../components/Report/Report.styles";
+import { ButtonBlue, ButtonBlueActive, ButtonYellowActive } from "../../components/Report/Report.styles";
 
 interface Props {}
 
@@ -32,7 +32,7 @@ const SelfReportPage = (props: Props) => {
         <div>
           <H2>Have you had any of the following symptoms in the last 2 weeks:</H2>
           <ButtonLine>
-            <ButtonBlue>Dry cough</ButtonBlue>
+            <ButtonBlueActive>Dry cough</ButtonBlueActive>
             <ButtonBlue>Fatique</ButtonBlue>
             <ButtonBlue>Fever</ButtonBlue>
             <ButtonBlue>Shortness of breath</ButtonBlue>
@@ -55,7 +55,7 @@ const SelfReportPage = (props: Props) => {
           <H2>Chance you are affected:</H2>
           <ButtonLine>
             <ButtonBlue>Low</ButtonBlue>
-            <ButtonBlue>Moderate</ButtonBlue>
+            <ButtonYellowActive>Moderate</ButtonYellowActive>
             <ButtonBlue>High</ButtonBlue>
           </ButtonLine>
         </div>
@@ -63,7 +63,17 @@ const SelfReportPage = (props: Props) => {
           <H2>Based on the result we recommend:</H2>
           <ButtonLine>
             <ButtonBlue>Seek medical help</ButtonBlue>
-            <ButtonBlue>Stay home</ButtonBlue>
+            <ButtonYellowActive>Stay home</ButtonYellowActive>
+          </ButtonLine>
+          <ReportText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie suspendisse sed urna dapibus scelerisque pretium proin pellentesque. Pharetra egestas montes, lobortis interdum dui. Molestie mattis ut erat mollis. Feugiat egestas semper scelerisque ut odio quis. Quisque.</ReportText>
+        </div>
+        <div>
+          <H2>Reporting</H2>
+          <ReportText>By marking yourself as potential COVID-19 infected you help contain the spread of the disease. All your data you share publicly i.e your status is completely anonymous</ReportText>
+          <ButtonLine>
+            <ButtonYellowActive>Save</ButtonYellowActive>
+            <ButtonBlue>Reset</ButtonBlue>
+            <ButtonBlue>Cancel</ButtonBlue>
           </ButtonLine>
         </div>
       </div>
