@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { HeaderContainer } from "./NavBar.styles";
 import { HeaderLinks } from "./NavBar.styles";
 import { HeaderMenu } from "./NavBar.styles";
+import { NavBarContainer, SignInOutContainer } from "./NavBar.styles";
 
 import { StoreContext } from "../../state/store";
 
@@ -15,37 +16,30 @@ const NavBar: React.FC<Props> = () => {
   const { userLoggedIn, setUserLoggedIn } = useContext(StoreContext);
 
   const handleLogin = () => {
-    setUserLoggedIn(!userLoggedIn);
+    setUserLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setUserLoggedIn(false);
   };
 
   return (
     <div>
-      {!userLoggedIn ? <Redirect to="/" /> : <Redirect to="/map" />}
       {!userLoggedIn ? (
-        <HeaderContainer>
-          <HeaderLinks>
-            <div>
-              <Link to="/"><img src={LogoViri} alt="Viri logo" /></Link>
-            </div>
-            <HeaderMenu>
-              <div><Link to="/howthisworks">HOW THIS WORKS</Link></div>
-              <div onClick={handleLogin}>SIGN IN</div>
-            </HeaderMenu>
-          </HeaderLinks>
-        </HeaderContainer>
+        <NavBarContainer>
+          <Link to="/">VIRI</Link>
+          <Link to="/howthisworks">HOW THIS WORKS</Link>
+          <SignInOutContainer onClick={handleLogin}>SIGN IN</SignInOutContainer>
+        </NavBarContainer>
       ) : (
-        <HeaderContainer>
-          <HeaderLinks>
-            <div>
-              <Link to="/"><img src={LogoViri} alt="Viri logo" /></Link>
-            </div>
-            <HeaderMenu>
-              <Link to="/selfreport">SELF-CHECK</Link>
-              <Link to="/profile">PROFILE</Link>
-              <div onClick={handleLogin}>SIGN OUT</div>
-            </HeaderMenu>
-          </HeaderLinks>
-        </HeaderContainer>
+        <NavBarContainer>
+          <Link to="/map">VIRI</Link>
+          <Link to="/selfreport">SELF-CHECK</Link>
+          <Link to="/profile">PROFILE</Link>
+          <SignInOutContainer onClick={handleLogout}>
+            SIGN OUT
+          </SignInOutContainer>
+        </NavBarContainer>
       )}
     </div>
   );

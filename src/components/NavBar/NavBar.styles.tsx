@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.nav`
-  background-color: #FFFCF9;
+export const NavBarContainer = styled.div`
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   padding: 0 2rem;
@@ -22,6 +23,10 @@ export const HeaderLinks = styled.div`
   align-items: center;
   width: 1440px;
   margin: auto;
+`;
+
+export const SignInOutContainer = styled.div`
+  cursor: pointer;
 `;
 
 export const HeaderMenu = styled.div`

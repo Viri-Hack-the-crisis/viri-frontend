@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
+
+import { StoreContext } from "../../state/store";
 
 import { ReportContainer } from "../../components/Report/Report.styles";
 import { H1 } from "../../components/Report/Report.styles";
@@ -10,6 +13,15 @@ import { ButtonBlue } from "../../components/Report/Report.styles";
 interface Props {}
 
 const SelfReportPage = (props: Props) => {
+  const { userLoggedIn } = useContext(StoreContext);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!userLoggedIn) {
+      history.replace("/");
+    }
+  }, [history, userLoggedIn]);
+
   return (
     <ReportContainer>
       <div>

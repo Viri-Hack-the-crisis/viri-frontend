@@ -4,10 +4,13 @@ export const StoreContext = createContext();
 
 export default ({ children }) => {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [confirmedInfected, setConfirmedInfected] = useState(0);
 
   const store = {
     userLoggedIn,
-    setUserLoggedIn
+    setUserLoggedIn,
+    confirmedInfected,
+    setConfirmedInfected
   };
 
   return (
