@@ -13,7 +13,7 @@ export const H1 = styled.div`
     line-height: 42px;
     text-transform: uppercase;
     color: #346EA6;
-    padding-bottom: 36px;
+    padding-bottom: 30px;
     margin-top: 100px;
 `;
 
@@ -22,7 +22,7 @@ export const H2 = styled.div`
     font-size: 20px;
     line-height: 23px;
     color: #346EA6;
-    padding-bottom: 36px;
+    padding-bottom: 26px;
 `;
 
 export const ReportText = styled.p`
@@ -36,7 +36,7 @@ export const ButtonLine = styled.div`
     display: flex;
     flex-wrap: wrap;
     max-width: 540px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-left: -5px;
 `;
 
@@ -45,9 +45,10 @@ export const ButtonBlue = styled.button`
     border: 1px solid #346EA6;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 15px 23px;
+    padding: 12px 23px;
     color: #346EA6;
     font-size: 16px;
     line-height: 19px;
     margin: 5px;
+    background-color: transparent;
 `;
