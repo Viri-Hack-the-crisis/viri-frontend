@@ -1,4 +1,3 @@
-import React from "react";
 import { HeroContainer } from "../../components/Hero/Hero.styles";
 import { HeroLeft } from "../../components/Hero/Hero.styles";
 import { HeroRight } from "../../components/Hero/Hero.styles";
