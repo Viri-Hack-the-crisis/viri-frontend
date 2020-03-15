@@ -31,7 +31,7 @@ const FrontPage = (props: Props) => {
         <HeroLeft>
           <H1>VIRI</H1>
           <H2>Your virus awareness companion</H2>
-          <HeroText>Take proactive measurements against the virus, track virus interactions, self-report your status and get notified how many times you have been in close contact with the infection</HeroText>
+          <HeroText>Become aware of local virus infection interactions, your own status and help others to do the same.</HeroText>
           <ButtonAction>Get Started</ButtonAction>
         </HeroLeft>
         <HeroRight>
