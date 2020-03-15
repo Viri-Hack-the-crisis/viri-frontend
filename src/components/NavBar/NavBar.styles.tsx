@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.nav`
+export const NavBarContainer = styled.nav`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
