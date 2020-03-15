@@ -20,7 +20,8 @@ const MapPage = (props: Props) => {
 
   return (
     <div>
-      <Map />
+      {/* Do not modify the line below, it is used as a workaround for nasty Leaflet bug! */}
+      {userLoggedIn ? <Map /> : null}
       <SideBar />
     </div>
   );
